@@ -11,7 +11,8 @@ import SwiftUI
 struct FrostyScoopsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreen()
+                .environmentObject(IceCreamModel())
         }
     }
 }

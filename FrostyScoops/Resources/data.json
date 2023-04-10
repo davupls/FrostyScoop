@@ -1,0 +1,202 @@
+[
+    {
+        "name": "Gelato",
+        "image": "galato-icon",
+        "flavor": 
+        [ 
+            {
+                "name": "Dark Chocolate",
+                "images": "chocolate gelato",
+                "cost": 4.99
+            },
+            {
+                "name": "Pistachio",
+                "images": "pistachio gelato",
+                "cost": 4.68
+            },
+            {
+                "name": "Raspberries",
+                "images": "raspberry gelato",
+                "cost": 4.34
+            },
+            {
+                "name": "Lemon",
+                "images": "lemon gelato", 
+                "cost": 4.56
+            },
+            {
+                "name": "Tiramisu",
+                "images":"tiramisu gelato",
+                "cost": 4.65
+            }  
+        ],
+        "description": "Italian Ice Cream, that's made with whole milk, rather than cream. This difference enhances the flavors and puts a smile on your face."
+    },
+    {
+        "name": "Rolled",
+        "image": "rolled-icon",
+        "flavor": 
+        [ 
+            {
+                "name": "Paan King",
+                "images": "paan rolled",
+                "cost": 8.99
+            },
+            {
+                "name": "Strawberry Banana",
+                "images": "strawberry rolled",
+                "cost": 8.67
+            },
+            {
+                "name": "Mint Chocolate Chip",
+                "images": "mint rolled",
+                "cost": 8.45
+            },
+            {
+                "name": "Brownie",
+                "images": "brownie rolled",
+                "cost": 8.34
+            },
+            {
+                "name": "Salty, Sweet Caramel",
+                "images": "caramel rolled",
+                "cost": 8.99
+            }         
+        ],
+        "description": "Italian Ice Cream, that's made with whole milk, rather than cream. This difference enhances the flavors and puts a smile on your face."
+    },
+    {
+        "name": "Ice Popsicle",
+        "image": "popsicle-icon",
+        "flavor": 
+        [ 
+            {
+                "name": "Banana",
+                "images": "banana popsicle",
+                "cost": 8.99
+            },
+            {
+                "name": "Cherry",
+                "images": "cherry popsicle",
+                "cost": 2.48
+            },
+            {
+                "name": "FireCracker",
+                "images": "firecracker popsicle",
+                "cost": 2.83
+            },
+            {
+                "name": "Fudge",
+                "images": "fudge popsicle",
+                "cost": 2.13
+            },
+            {
+                "name": "Grape",
+                "images": "grape popsicle",
+                "cost": 2.52
+            }  
+        ],
+            "description": "Italian Ice Cream, that's made with whole milk, rather than cream. This difference enhances the flavors and puts a smile on your face."
+    },
+    {
+        "name": "Soft Servce",
+        "image": "soft-icon",
+        "flavor": 
+        [ 
+            {
+                "name": "Chocolate", 
+                "image": "chocolate soft",
+                "cost": 3.39
+            },
+            {
+                "name":  "Vanilla",
+                "image": "vanilla soft",
+                "cost": 3.76
+            },
+            {
+                "name": "Strawberry",
+                "image": "strawberry soft",
+                "cost": 3.86
+            },
+            {
+                "name": "Cookies and Cream",
+                "image": "cookies soft",
+                "cost": 3.15
+            },
+            {
+                "name": "Mint Chocolate Chip",
+                "image": "mintchip soft",
+                "cost": 3.24
+            }   
+        ],
+        "description": "Italian Ice Crea, that's made with whole milk, rather than cream. This difference enhances the flavors and puts a smile on your face."
+
+    },
+    {
+        "name": "Frozen Yogurt",
+        "image": "yogurt-icon",
+        "flavor": 
+        [ 
+            {
+                "name": "Vanilla", 
+                "image": "vanilla yogurt",
+                "cost": 5.35
+            },
+            {
+                "name": "Chocolate",
+                "image": "chocolate yogurt",
+                "cost": 5.60
+            },
+            {
+                "name": "Strawberry",
+                "image": "strawberry yogurt",
+                "cost": 5.76
+            },
+            {
+                "name": "Cookies and Cream",
+                "image": "cookies yogurt",
+                "cost": 5.14
+            },
+            {
+                "name": "Banana",
+                "image": "banana yogurt",
+                "cost": 5.27
+            }
+        ],
+        "description": "Italian Ice Crea, that's made with whole milk, rather than cream. This difference enhances the flavors and puts a smile on your face."
+    },
+    {
+        "name": "Mochi",
+        "image": "mochi",
+        "flavor": 
+        [   
+            {
+                "name": "Red Bean",
+                "image": "red bean mochi",
+                "cost": 4.97
+            },
+            {
+                "name": "Chocolate and Vanilla",
+                "image": "chocolate mochi",
+                "cost": 4.85
+            },
+            {
+                "name": "Strawberry",
+                "image": "strawberry mochi",
+                "cost": 4.34
+            },
+            {
+                "name":  "Tiramisu",
+                "image": "tiramisu mochi",
+                "cost": 4.64
+            },
+            {
+                "name": "Green Tea",
+                "image": "greentea mochi",
+                "cost": 4.55
+            }            
+        ],
+
+            "description": "Bite into the center of Mmmm. Made with real fruit, and bursting with sweet bits."
+    }
+]

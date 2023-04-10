@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		9383595029E3B74800BBAB9F /* FrostyScoopsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9383594F29E3B74800BBAB9F /* FrostyScoopsApp.swift */; };
-		9383595229E3B74800BBAB9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9383595129E3B74800BBAB9F /* ContentView.swift */; };
+		9383595229E3B74800BBAB9F /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9383595129E3B74800BBAB9F /* HomeScreen.swift */; };
 		9383595429E3B74900BBAB9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9383595329E3B74900BBAB9F /* Assets.xcassets */; };
 		9383595729E3B74900BBAB9F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9383595629E3B74900BBAB9F /* Preview Assets.xcassets */; };
+		9383596229E3B7B300BBAB9F /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 9383596129E3B7B300BBAB9F /* data.json */; };
+		9383596629E3B87500BBAB9F /* IceCreamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9383596529E3B87500BBAB9F /* IceCreamModel.swift */; };
+		9383596829E3B8A000BBAB9F /* IceCream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9383596729E3B8A000BBAB9F /* IceCream.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9383594C29E3B74800BBAB9F /* FrostyScoops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrostyScoops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9383594F29E3B74800BBAB9F /* FrostyScoopsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrostyScoopsApp.swift; sourceTree = "<group>"; };
-		9383595129E3B74800BBAB9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9383595129E3B74800BBAB9F /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		9383595329E3B74900BBAB9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9383595629E3B74900BBAB9F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9383596129E3B7B300BBAB9F /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		9383596529E3B87500BBAB9F /* IceCreamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCreamModel.swift; sourceTree = "<group>"; };
+		9383596729E3B8A000BBAB9F /* IceCream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCream.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				9383594F29E3B74800BBAB9F /* FrostyScoopsApp.swift */,
-				9383595129E3B74800BBAB9F /* ContentView.swift */,
+				9383596029E3B77300BBAB9F /* Model */,
+				9383595E29E3B76400BBAB9F /* Views */,
+				9383595F29E3B76900BBAB9F /* ViewModel */,
+				9383595D29E3B75E00BBAB9F /* Resources */,
 				9383595329E3B74900BBAB9F /* Assets.xcassets */,
 				9383595529E3B74900BBAB9F /* Preview Content */,
 			);
@@ -65,6 +74,46 @@
 				9383595629E3B74900BBAB9F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9383595D29E3B75E00BBAB9F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9383596129E3B7B300BBAB9F /* data.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9383595E29E3B76400BBAB9F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9383596929E3C23100BBAB9F /* SubViews */,
+				9383595129E3B74800BBAB9F /* HomeScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9383595F29E3B76900BBAB9F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9383596529E3B87500BBAB9F /* IceCreamModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9383596029E3B77300BBAB9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9383596729E3B8A000BBAB9F /* IceCream.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9383596929E3C23100BBAB9F /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9383595729E3B74900BBAB9F /* Preview Assets.xcassets in Resources */,
+				9383596229E3B7B300BBAB9F /* data.json in Resources */,
 				9383595429E3B74900BBAB9F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +187,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9383595229E3B74800BBAB9F /* ContentView.swift in Sources */,
+				9383596629E3B87500BBAB9F /* IceCreamModel.swift in Sources */,
+				9383595229E3B74800BBAB9F /* HomeScreen.swift in Sources */,
+				9383596829E3B8A000BBAB9F /* IceCream.swift in Sources */,
 				9383595029E3B74800BBAB9F /* FrostyScoopsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
