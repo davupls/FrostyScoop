@@ -8,17 +8,14 @@
 import Foundation
 
 struct IceCream: Codable, Identifiable {
-    let id = UUID()
+    var id: Int
     var name, image: String
-    var flavor: [Flavor]
     var description: String
+    var flavor: [Flavor]
 }
 
-// MARK: - Flavor
 struct Flavor: Codable, Identifiable {
-    let id = UUID()
-    var name: String
-    var images: String?
-    var cost: Double
-    var image: String?
+    var id: Int
+    var name, images: String
+    var cost: Float
 }

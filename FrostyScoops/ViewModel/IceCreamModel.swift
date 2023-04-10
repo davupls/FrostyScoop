@@ -9,6 +9,7 @@ import Foundation
 
 class IceCreamModel: ObservableObject {
     @Published var IceCreamCategories: [IceCream] = []
+    @Published var IceCreamFlavors: [Flavor] = []
     
     init() {
         loadIceCreamData()
@@ -20,14 +21,38 @@ class IceCreamModel: ObservableObject {
             return
         }
         
+        //MARK: IceCream Decode
         do {
             let data = try Data(contentsOf: url)
             let decodedData = try JSONDecoder().decode([IceCream].self, from: data)
+            
             IceCreamCategories = decodedData
+            
+            
         }
         catch
         {
             print("Error decoding ice cream data: \(error)")
         }
+        
+        
+        
+        //MARK: Flavors Decode
+       do
+       {
+           let data = try Data(contentsOf: url)
+           let IceCreamCategories = try JSONDecoder().decode([IceCream].self, from: data)
+           
+           // Extract all the flavors from all the ice cream categories
+           let allFlavors = IceCreamCategories.flatMap { $0.flavor }
+           
+           
+           IceCreamFlavors = allFlavors
+           
+           
+       }
+       catch {
+           print("Error decoding flavors data: \(error)")
+       }
     }
 }
