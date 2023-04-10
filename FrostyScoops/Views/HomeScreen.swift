@@ -11,13 +11,15 @@ struct HomeScreen: View {
     @StateObject var viewModel = IceCreamModel()
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ScrollView(.horizontal) {
+            HStack {
+                ForEach(viewModel.IceCreamCategories) { category in
+                    
+                    IceCreamCategoryCard(category: category)
+                }
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
