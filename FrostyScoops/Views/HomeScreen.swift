@@ -13,6 +13,9 @@ struct HomeScreen: View {
     
     var body: some View {
         VStack {
+            UserGreetingsView()
+                .padding()
+            SearchBarView()
             
             //MARK: Category Buttons
             ScrollView(.horizontal, showsIndicators: false) {
@@ -22,9 +25,20 @@ struct HomeScreen: View {
                             Button(action: {
                                 selectedCategory = iceCream
                             }) {
-                                Text(iceCream.name)
-                                    .font(.body)
-                                    .foregroundColor(.white)
+                                VStack(spacing: 10) {
+                                    
+                                    Image(systemName: "scribble")
+                                        .foregroundColor(.black)
+                                        .font(.title)
+                                    
+                                    Text(iceCream.name)
+                                        .bold()
+                                        .font(.body)
+                                        .foregroundColor(.black)
+                                        
+                                    
+                                }
+                                
                             }
                             .padding()
                             .background(.cyan)
@@ -35,23 +49,28 @@ struct HomeScreen: View {
             
             //MARK: Feature Cards
             ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack {
+                LazyHStack(spacing: 20) {
                     ForEach(selectedCategory?.flavor ?? viewModel.IceCreamFlavors) { flavor in
-                        VStack(spacing: 10) {
+                        VStack(spacing: 20) {
+                            
+                            Image(systemName: "lasso.and.sparkles")
+                                .font(.system(size: 80))
                             Text(flavor.name)
                                 .font(.title)
                             Text("$\(flavor.cost, specifier: "%.2f")")
                                 .font(.title2)
+                            
                         }
                      
                     }
-                    .frame(width: 250, height: 300)
+                    .frame(width: 250, height: 400)
                     .background(.purple)
                     .foregroundColor(.white)
                     .cornerRadius(20)
                     
                 }
             }
+            Spacer()
         }
     }
 }
