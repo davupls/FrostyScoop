@@ -49,26 +49,30 @@ struct HomeScreen: View {
             
             //MARK: Feature Cards
             ScrollView(.horizontal, showsIndicators: false) {
+                
+                
                 LazyHStack(spacing: 20) {
-                    ForEach(selectedCategory?.flavor ?? viewModel.IceCreamFlavors) { flavor in
-                        VStack(spacing: 20) {
+                        
+                        ForEach(selectedCategory?.flavor ?? viewModel.IceCreamFlavors) { flavor in
                             
-                            Image(systemName: "lasso.and.sparkles")
-                                .font(.system(size: 80))
-                            Text(flavor.name)
-                                .font(.title)
-                            Text("$\(flavor.cost, specifier: "%.2f")")
-                                .font(.title2)
-                            
+                            VStack(spacing: 20) {
+                                
+                                Image(systemName: "lasso.and.sparkles")
+                                    .font(.system(size: 80))
+                                Text(flavor.name)
+                                    .font(.title)
+                                Text("$\(flavor.cost, specifier: "%.2f")")
+                                    .font(.title2)
+                                
+                            }
+                         
                         }
-                     
+                        .frame(width: 250, height: 400)
+                        .background(.purple)
+                        .foregroundColor(.white)
+                        .cornerRadius(20)
+                        
                     }
-                    .frame(width: 250, height: 400)
-                    .background(.purple)
-                    .foregroundColor(.white)
-                    .cornerRadius(20)
-                    
-                }
             }
             Spacer()
         }

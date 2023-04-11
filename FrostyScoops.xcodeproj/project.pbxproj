@@ -17,6 +17,7 @@
 		93B83CB529E4B0A800B0F4D6 /* UserGreetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B83CB429E4B0A800B0F4D6 /* UserGreetingsView.swift */; };
 		93B83CB729E4B16500B0F4D6 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B83CB629E4B16500B0F4D6 /* SearchBarView.swift */; };
 		93B83CB929E4B24E00B0F4D6 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B83CB829E4B24E00B0F4D6 /* RootTabView.swift */; };
+		93B83CBC29E535DF00B0F4D6 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B83CBB29E535DF00B0F4D6 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		93B83CB429E4B0A800B0F4D6 /* UserGreetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGreetingsView.swift; sourceTree = "<group>"; };
 		93B83CB629E4B16500B0F4D6 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		93B83CB829E4B24E00B0F4D6 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		93B83CBB29E535DF00B0F4D6 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				9383596929E3C23100BBAB9F /* HomeSubViews */,
 				9383595129E3B74800BBAB9F /* HomeScreen.swift */,
 				93B83CB829E4B24E00B0F4D6 /* RootTabView.swift */,
+				93B83CBB29E535DF00B0F4D6 /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93B83CB929E4B24E00B0F4D6 /* RootTabView.swift in Sources */,
+				93B83CBC29E535DF00B0F4D6 /* DetailView.swift in Sources */,
 				9383596629E3B87500BBAB9F /* IceCreamModel.swift in Sources */,
 				9383595229E3B74800BBAB9F /* HomeScreen.swift in Sources */,
 				93B83CB529E4B0A800B0F4D6 /* UserGreetingsView.swift in Sources */,
