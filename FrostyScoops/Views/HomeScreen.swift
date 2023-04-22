@@ -75,9 +75,7 @@ struct HomeScreen: View {
                             }
                             .background(LinearGradient(gradient: gradient, startPoint: .bottomTrailing, endPoint: .topLeading))
                             .sheet(item: $isShowingView) { item in
-                                VStack(alignment: .leading) {
-                                    DetailView(flavorName: item.name, description: item.description, cost: item.cost)
-                                }
+                                DetailView(flavorName: item.name, description: item.description, cost: item.cost)
                             }
                         }
 
