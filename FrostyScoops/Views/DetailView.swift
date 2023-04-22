@@ -29,7 +29,8 @@ struct DetailView: View {
                     .bold()
                 Spacer()
                 Button("Add to Cart") {
-                    print("Price of Ice Cream: \(cost)")
+                    print("Price of \(flavorName) Ice Cream: \(cost)")
+                    
                 }
                     .foregroundColor(.white)
                     .bold()
