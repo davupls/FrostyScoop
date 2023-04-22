@@ -16,10 +16,10 @@ struct RootTabView: View {
                 .tabItem {
                     Label("Home", systemImage: "house")
             }
-            Text("Detail")
-                .tabItem {
-                    Label("Detail", systemImage: "book")
-                }
+//            Text("Detail")
+//                .tabItem {
+//                    Label("Detail", systemImage: "book")
+//                }
             Text("Cart")
                 .tabItem {
                     Label("Cart", systemImage: "cart")
