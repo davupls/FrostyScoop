@@ -10,12 +10,12 @@ import Foundation
 struct IceCream: Codable, Identifiable {
     var id: Int
     var name, image: String
-    var description: String
     var flavor: [Flavor]
 }
 
 struct Flavor: Codable, Identifiable {
     var id: Int
     var name, images: String
+    var description: String
     var cost: Float
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DetailView: View {
+    
     var flavorName: String
     var description: String
     var cost: Float
@@ -23,7 +24,7 @@ struct DetailView: View {
             Text("\(description)")
          
             HStack{
-                Text("$\(cost)")
+                Text("$\(cost, specifier: "%.2f")")
                     .font(.title)
                     .bold()
                 Spacer()
@@ -41,12 +42,19 @@ struct DetailView: View {
             .padding(.top)
             
         }
+        .padding()
         
     }
+    
+    let formatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        return formatter
+    }()
 }
 
-//struct DetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DetailView()
-//    }
-//}
+struct DetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        DetailView(flavorName: "Gelato", description: "Italian Ice Crea, that's made with whole milk, rather than cream. This difference enhances the flavors and puts a smile on your face.", cost: 4.56)
+    }
+}
