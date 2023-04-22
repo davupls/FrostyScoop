@@ -16,11 +16,7 @@ struct RootTabView: View {
                 .tabItem {
                     Label("Home", systemImage: "house")
             }
-//            Text("Detail")
-//                .tabItem {
-//                    Label("Detail", systemImage: "book")
-//                }
-            Text("Cart")
+            CartView()
                 .tabItem {
                     Label("Cart", systemImage: "cart")
                 }

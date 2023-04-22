@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CartView: View {
+    @EnvironmentObject var viewModel: IceCreamModel
+    @State private var modelFlavor : Flavor? = nil
+    
     var body: some View {
         VStack {
             HStack {
@@ -24,6 +27,7 @@ struct CartView: View {
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
         CartView()
+            .environmentObject(IceCreamModel())
     }
 }
 

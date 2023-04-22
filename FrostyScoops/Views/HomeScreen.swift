@@ -10,8 +10,9 @@ import SwiftUI
 struct HomeScreen: View {
     @EnvironmentObject var viewModel: IceCreamModel
     @State var selectedCategory: IceCream?
-    let gradient = Gradient(colors: [.yellow, .pink])
     @State private var isShowingView : Flavor? = nil
+    let gradient = Gradient(colors: [.yellow, .pink])
+    
     
     var body: some View {
         VStack {
