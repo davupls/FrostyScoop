@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeScreen: View {
     @EnvironmentObject var viewModel: IceCreamModel
     @State var selectedCategory: IceCream?
+    let gradient = Gradient(colors: [.yellow, .pink])
     
     var body: some View {
         VStack {
@@ -46,7 +47,7 @@ struct HomeScreen: View {
                 }
                 
             }
-            .padding(.top)
+            .padding(.vertical)
             
             //MARK: Feature Cards
             ScrollView(.horizontal, showsIndicators: false) {
@@ -60,7 +61,7 @@ struct HomeScreen: View {
                             Image("\(flavor.images)")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(maxWidth: 200, maxHeight: 300)
+                                .frame(maxWidth: 200)
                             
                             Text(flavor.name)
                                 .bold()
@@ -68,10 +69,12 @@ struct HomeScreen: View {
                             Text("$\(flavor.cost, specifier: "%.2f")")
                                 .font(.title3)
                         }
+                        .background(LinearGradient(gradient: gradient, startPoint: .bottomTrailing, endPoint: .topLeading))
                     }
                     .foregroundColor(.black)
                     .cornerRadius(20)
                 }
+                .frame(maxHeight: 350)
             }
         }
         .preferredColorScheme(.light)
