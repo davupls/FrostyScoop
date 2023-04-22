@@ -17,8 +17,8 @@ struct SearchBarView: View {
             }
         }
         .searchable(text: $searchText, prompt: "Search For IceCream")
-        
-        .frame(height: 90)
+        .frame(height: 80)
+
     }
 }
 

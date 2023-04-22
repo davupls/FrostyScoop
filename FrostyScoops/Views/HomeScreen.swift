@@ -14,68 +14,67 @@ struct HomeScreen: View {
     var body: some View {
         VStack {
             UserGreetingsView()
-                .padding()
+                .padding(.horizontal)
             SearchBarView()
+                .padding(0)
+            
             
             //MARK: Category Buttons
             ScrollView(.horizontal, showsIndicators: false) {
-                    
-                    HStack {
-                        ForEach(viewModel.IceCreamCategories) { iceCream in
-                            Button(action: {
-                                selectedCategory = iceCream
-                            }) {
-                                VStack(spacing: 10) {
-                                    
-                                    Image(systemName: "scribble")
-                                        .foregroundColor(.black)
-                                        .font(.title)
-                                    
-                                    Text(iceCream.name)
-                                        .bold()
-                                        .font(.body)
-                                        .foregroundColor(.black)
-                                        
-                                    
-                                }
+                
+                HStack(spacing: 20) {
+                    ForEach(viewModel.IceCreamCategories) { iceCream in
+                        Button(action: {
+                            selectedCategory = iceCream
+                        }) {
+                            VStack {
                                 
+                                VStack {
+                                    Image("\(iceCream.image)")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 80, height: 80)
+                                }
+                                .clipShape(Circle())
+                                
+                                Text(iceCream.name)
+                                    .font(.system(size: 15))
+                                    .foregroundColor(.black)
                             }
-                            .padding()
-                            .background(.cyan)
-                            
                         }
                     }
+                }
+                
             }
+            .padding(.top)
             
             //MARK: Feature Cards
             ScrollView(.horizontal, showsIndicators: false) {
                 
-                
                 LazyHStack(spacing: 20) {
+                    
+                    ForEach(selectedCategory?.flavor ?? viewModel.IceCreamFlavors) { flavor in
                         
-                        ForEach(selectedCategory?.flavor ?? viewModel.IceCreamFlavors) { flavor in
+                        VStack {
                             
-                            VStack(spacing: 20) {
-                                
-                                Image(systemName: "lasso.and.sparkles")
-                                    .font(.system(size: 80))
-                                Text(flavor.name)
-                                    .font(.title)
-                                Text("$\(flavor.cost, specifier: "%.2f")")
-                                    .font(.title2)
-                                
-                            }
-                         
+                            Image("\(flavor.images)")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxWidth: 200, maxHeight: 300)
+                            
+                            Text(flavor.name)
+                                .bold()
+                                .font(.title3)
+                            Text("$\(flavor.cost, specifier: "%.2f")")
+                                .font(.title3)
                         }
-                        .frame(width: 250, height: 400)
-                        .background(.purple)
-                        .foregroundColor(.white)
-                        .cornerRadius(20)
-                        
                     }
+                    .foregroundColor(.black)
+                    .cornerRadius(20)
+                }
             }
-            Spacer()
         }
+        .preferredColorScheme(.light)
     }
 }
 

@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Gelato",
-        "image": "galato-icon",
+        "image": "gelato-icon",
         "description": "Italian Ice Cream, that's made with whole milk, rather than cream. This difference enhances the flavors and puts a smile on your face.",
         "flavor": [
             {
@@ -20,7 +20,7 @@
             {
                 "id": 3,
                 "name": "Raspberries",
-                "images": "raspberry gelato",
+                "images": "rasberry gelato",
                 "cost": 4.34
             },
             {
@@ -192,7 +192,7 @@
     {
         "id": 6,
         "name": "Mochi",
-        "image": "mochi",
+        "image": "mochi-icon",
         "description": "Bite into the center of Mmmm. Made with real fruit, and bursting with sweet bits.",
         "flavor": [   
             {
