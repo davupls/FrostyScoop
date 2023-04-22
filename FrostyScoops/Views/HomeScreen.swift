@@ -11,6 +11,7 @@ struct HomeScreen: View {
     @EnvironmentObject var viewModel: IceCreamModel
     @State var selectedCategory: IceCream?
     let gradient = Gradient(colors: [.yellow, .pink])
+    @State private var isShowingView : Flavor? = nil
     
     var body: some View {
         VStack {
@@ -56,20 +57,28 @@ struct HomeScreen: View {
                     
                     ForEach(selectedCategory?.flavor ?? viewModel.IceCreamFlavors) { flavor in
                         
-                        VStack {
-                            
-                            Image("\(flavor.images)")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(maxWidth: 200)
-                            
-                            Text(flavor.name)
-                                .bold()
-                                .font(.title3)
-                            Text("$\(flavor.cost, specifier: "%.2f")")
-                                .font(.title3)
+                        Button {
+                            isShowingView = flavor
+                        } label: {
+                            VStack {
+                                
+                                Image("\(flavor.images)")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(maxWidth: 200)
+                                
+                                Text(flavor.name)
+                                    .bold()
+                                    .font(.title3)
+                                Text("$\(flavor.cost, specifier: "%.2f")")
+                                    .font(.title3)
+                            }
+                            .background(LinearGradient(gradient: gradient, startPoint: .bottomTrailing, endPoint: .topLeading))
+                            .sheet(item: $isShowingView) { user in
+                                DetailView(flavorName: user.name, description: "user", cost: user.cost)
+                            }
                         }
-                        .background(LinearGradient(gradient: gradient, startPoint: .bottomTrailing, endPoint: .topLeading))
+
                     }
                     .foregroundColor(.black)
                     .cornerRadius(20)

@@ -8,19 +8,22 @@
 import SwiftUI
 
 struct DetailView: View {
+    var flavorName: String
+    var description: String
+    var cost: Float
     
     
     var body: some View {
         VStack(alignment: .leading) {
             
-            Text("Vanilla Popsicle")
+            Text("\(flavorName)")
                 .font(.largeTitle)
                 .bold()
                 .padding(.bottom)
-            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero justo laoreet sit amet cursus sit amet. Accumsan tortor posuere ac ut consequat. Lorem ipsum dolor sit amet. Tristique senectus et netus et malesuada fames ac turpis.")
+            Text("\(description)")
          
             HStack{
-                Text("$2.54")
+                Text("$\(cost)")
                     .font(.title)
                     .bold()
                 Spacer()
@@ -42,8 +45,8 @@ struct DetailView: View {
     }
 }
 
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailView()
-    }
-}
+//struct DetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DetailView()
+//    }
+//}
