@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeScreen: View {
     @EnvironmentObject var viewModel: IceCreamModel
+    @EnvironmentObject var orderModel: OrdersList
     @State var selectedCategory: IceCream?
     @State private var isShowingView : Flavor? = nil
     let gradient = Gradient(colors: [.yellow, .pink])
@@ -76,7 +77,7 @@ struct HomeScreen: View {
                             }
                             .background(LinearGradient(gradient: gradient, startPoint: .bottomTrailing, endPoint: .topLeading))
                             .sheet(item: $isShowingView) { item in
-                                DetailView(flavorName: item.name, description: item.description, cost: item.cost)
+                                DetailView(flavorName: item.name, description: item.description, cost: item.cost, flavorImage: item.images)
                             }
                         }
 
@@ -95,5 +96,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         HomeScreen()
             .environmentObject(IceCreamModel())
+            .environmentObject(OrdersList())
     }
 }

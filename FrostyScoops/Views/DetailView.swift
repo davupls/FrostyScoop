@@ -12,6 +12,9 @@ struct DetailView: View {
     var flavorName: String
     var description: String
     var cost: Float
+    var flavorImage: String
+    
+    @EnvironmentObject var orderModel: OrdersList
     
     
     var body: some View {
@@ -29,7 +32,9 @@ struct DetailView: View {
                     .bold()
                 Spacer()
                 Button("Add to Cart") {
-                    print("Price of \(flavorName) Ice Cream: \(cost)")
+                    let idGen = UUID()
+                    orderModel.order![idGen] = [flavorName, flavorImage, String(cost)]
+                    print(orderModel.order!)
                     
                 }
                     .foregroundColor(.white)
@@ -56,6 +61,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(flavorName: "Gelato", description: "Italian Ice Crea, that's made with whole milk, rather than cream. This difference enhances the flavors and puts a smile on your face.", cost: 4.56)
+        DetailView(flavorName: "Gelato", description: "Italian Ice Crea, that's made with whole milk, rather than cream. This difference enhances the flavors and puts a smile on your face.", cost: 4.56, flavorImage: "chocolate soft")
+            .environmentObject(OrdersList())
     }
 }

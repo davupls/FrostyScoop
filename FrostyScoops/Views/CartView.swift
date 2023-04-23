@@ -9,7 +9,9 @@ import SwiftUI
 
 struct CartView: View {
     @EnvironmentObject var viewModel: IceCreamModel
+    @EnvironmentObject var orderModel: OrdersList
     @State private var modelFlavor : Flavor? = nil
+    
     
     var body: some View {
         VStack {
@@ -19,6 +21,7 @@ struct CartView: View {
                 Text("Total")
                 Text("24")
             }
+            ItemCartView()
             
         }
     }
@@ -28,6 +31,7 @@ struct CartView_Previews: PreviewProvider {
     static var previews: some View {
         CartView()
             .environmentObject(IceCreamModel())
+            .environmentObject(OrdersList())
     }
 }
 

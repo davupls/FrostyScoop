@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct RootTabView: View {
-//    @Environment var viewModel: IceCreamModel
     
     var body: some View {
         TabView {
@@ -33,5 +32,6 @@ struct RootTabView_Previews: PreviewProvider {
     static var previews: some View {
         RootTabView()
             .environmentObject(IceCreamModel())
+            .environmentObject(OrdersList())
     }
 }

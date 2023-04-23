@@ -13,6 +13,8 @@ struct FrostyScoopsApp: App {
         WindowGroup {
             RootTabView()
                 .environmentObject(IceCreamModel())
+                .environmentObject(OrdersList())
+            
         }
     }
 }
